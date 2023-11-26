@@ -11,9 +11,8 @@ export function ShopDetail() {
   const shop = shops.find((item) => String(item.id) === id);
   if (!shop) navigate(`/`);
 
-  const handlePhone = () => {
-    if (!shop) return;
-    const phoneLink = `tel:${shop.phone}`;
+  const handlePhone = (phone: string) => {
+    const phoneLink = `tel:${phone}`;
     window.location.href = phoneLink;
   };
 
@@ -44,7 +43,7 @@ export function ShopDetail() {
 
         <div className="flex items-center gap-2 ">
           <MdAccessTime />
-          <span>{shop?.time ?? "24小时开放"}</span>
+          <span className="flex-1">{shop?.time ?? "24小时开放"}</span>
         </div>
 
         <div className="flex items-center gap-2">
@@ -52,10 +51,18 @@ export function ShopDetail() {
           <span>{shop?.address}</span>
         </div>
 
-        <div className="flex items-center gap-2 " onClick={() => handlePhone()}>
-          <FcPhoneAndroid />
-          <span>{shop?.phone}</span>
-        </div>
+        {shop?.phone.map((phone) => {
+          return (
+            <div
+              key={phone}
+              className="flex items-center gap-2 "
+              onClick={() => handlePhone(phone)}
+            >
+              <FcPhoneAndroid />
+              <span>{phone}</span>
+            </div>
+          );
+        })}
       </div>
     </Layout>
   );

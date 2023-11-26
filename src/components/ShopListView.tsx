@@ -41,7 +41,7 @@ export function ShopListView() {
               </span>
               <span className="text-xs flex items-center gap-2 ">
                 <FcPhoneAndroid />
-                {item.phone}
+                {item.phone[0]}
               </span>
             </div>
           </div>
