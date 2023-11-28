@@ -77,15 +77,6 @@ export const shops = [
     img: "7.jpg",
   },
   {
-    id: 8,
-    name: "蚝食力烧烤",
-    address: "锦江区芙蓉西路368号",
-    phone: ["19130507023"],
-    discount: ["通过联盟商家优惠券过来", "定酒水送6瓶 加精美小吃两个"],
-    time: "17:00-02.00",
-    img: "8.jpg",
-  },
-  {
     id: 9,
     name: "西里·SHERRY CLUB白咖夜酒 绿地云玺468店",
     address: "锦江区杜鹃街1399号",

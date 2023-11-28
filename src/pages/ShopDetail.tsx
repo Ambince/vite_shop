@@ -32,7 +32,9 @@ export function ShopDetail() {
         <div className="flex flex-col gap-2 ">
           <div className="flex gap-2 items-center">
             <TbPigMoney />
-            <span className="font-bold text-xl text-black">优惠信息:</span>
+            <span className="font-bold text-xl text-black">
+              语过联盟商家过来享受优惠福利:
+            </span>
           </div>
           <div className="flex gap-1 flex-col">
             {shop?.discount.map((item) => {
