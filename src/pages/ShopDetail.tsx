@@ -33,7 +33,7 @@ export function ShopDetail() {
           <div className="flex gap-2 items-center">
             <TbPigMoney />
             <span className="font-bold text-xl text-black">
-              语过联盟商家过来享受优惠福利:
+              通过联盟商家过来享受优惠福利:
             </span>
           </div>
           <div className="flex gap-1 flex-col">
